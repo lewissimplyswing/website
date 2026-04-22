@@ -1,0 +1,8 @@
+# Robots.txt for aratpacktribute.co.uk
+# Tells search engines (Google, Bing etc.) how to crawl the site
+
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://www.aratpacktribute.co.uk/sitemap.xml
