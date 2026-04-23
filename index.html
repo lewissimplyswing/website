@@ -1445,5 +1445,85 @@
       });
     }
   </script>
+
+  <!-- THE AUDIO PLAYER BRAINS -->
+<audio id="main-audio" preload="auto"></audio>
+
+<script>
+  const audio = document.getElementById('main-audio');
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+  const progress = document.getElementById('progress-bar');
+  const nowPlayingTitle = document.getElementById('now-playing-title');
+  const currentTimeDisplay = document.getElementById('time-current');
+  const durationDisplay = document.getElementById('time-total');
+
+  // 1. Function to play a specific track
+  function playTrack(file, title, element) {
+    audio.src = file;
+    nowPlayingTitle.innerText = title;
+    audio.play();
+    updatePlayIcons(true);
+    
+    // Optional: Highlight the selected track
+    document.querySelectorAll('.track-item').forEach(item => item.style.background = "transparent");
+    element.style.background = "rgba(201,168,76,0.1)";
+  }
+
+  // 2. Function to toggle Play/Pause
+  function togglePlay() {
+    if (!audio.src) return; // Do nothing if no track is loaded
+    if (audio.paused) {
+      audio.play();
+      updatePlayIcons(true);
+    } else {
+      audio.pause();
+      updatePlayIcons(false);
+    }
+  }
+
+  function updatePlayIcons(isPlaying) {
+    playIcon.style.display = isPlaying ? 'none' : 'block';
+    pauseIcon.style.display = isPlaying ? 'block' : 'none';
+  }
+
+  // 3. Switch between Classics and Christmas
+  function switchAlbum(album) {
+    const classics = document.getElementById('album-classics');
+    const christmas = document.getElementById('album-christmas');
+    const tabClassics = document.getElementById('tab-classics');
+    const tabChristmas = document.getElementById('tab-christmas');
+
+    if (album === 'classics') {
+      classics.style.display = 'block';
+      christmas.style.display = 'none';
+      tabClassics.style.background = 'var(--gold)';
+      tabChristmas.style.background = 'transparent';
+    } else {
+      classics.style.display = 'none';
+      christmas.style.display = 'block';
+      tabChristmas.style.background = 'var(--gold)';
+      tabClassics.style.background = 'transparent';
+    }
+  }
+
+  // 4. Update progress bar as music plays
+  audio.ontimeupdate = function() {
+    if (audio.duration) {
+      const percentage = (audio.currentTime / audio.duration) * 100;
+      progress.style.width = percentage + "%";
+      
+      // Update timer text
+      const currMin = Math.floor(audio.currentTime / 60);
+      const currSec = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+      currentTimeDisplay.innerText = currMin + ":" + currSec;
+      
+      const durMin = Math.floor(audio.duration / 60);
+      const durSec = Math.floor(audio.duration % 60).toString().padStart(2, '0');
+      durationDisplay.innerText = durMin + ":" + durSec;
+    }
+  };
+</script>
+
 </body>
 </html>
