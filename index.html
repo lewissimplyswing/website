@@ -1073,11 +1073,142 @@
         </div>
       </div>
 
-      <!-- AUDIO DEMOS PLACEHOLDER -->
-      <div class="reveal" id="audio-section" style="margin-bottom:5rem;padding:3rem;border:1px solid rgba(201,168,76,0.2);background:rgba(201,168,76,0.03);">
-        <p class="section-tag" style="margin-bottom:1rem;">Audio Demos</p>
-        <p style="font-size:1rem;color:var(--text-mid);font-style:italic;">Audio demos coming soon — check back shortly or get in touch to hear Lewis perform live.</p>
+      <!-- AUDIO DEMOS -->
+      <div class="reveal" id="audio-section" style="margin-bottom:5rem;">
+        <p class="section-tag" style="margin-bottom:0.5rem;">Audio Demos</p>
+        <p style="font-size:1.05rem;color:var(--text-light);font-weight:300;font-style:italic;margin-bottom:2.5rem;">Click any track below to listen to Lewis perform live. Select a collection to get started.</p>
+
+        <!-- ALBUM TABS -->
+        <div style="display:flex;gap:0;margin-bottom:2.5rem;border:1px solid rgba(201,168,76,0.2);">
+          <button id="tab-classics" onclick="switchAlbum('classics')" style="flex:1;padding:1.1rem 2rem;background:var(--gold);color:var(--black);border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;transition:all 0.3s;">The Classic Collection</button>
+          <button id="tab-christmas" onclick="switchAlbum('christmas')" style="flex:1;padding:1.1rem 2rem;background:transparent;color:var(--text-mid);border:none;border-left:1px solid rgba(201,168,76,0.2);cursor:pointer;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;transition:all 0.3s;">The Christmas Collection</button>
+        </div>
+
+        <!-- PLAYER LAYOUT -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+
+          <!-- PULSING GOLD CIRCLE VISUAL -->
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2rem;">
+            <div id="player-visual" style="position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center;margin-bottom:2rem;">
+              <!-- Pulse rings -->
+              <div class="pulse-ring" id="ring1" style="position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid rgba(201,168,76,0.15);"></div>
+              <div class="pulse-ring" id="ring2" style="position:absolute;width:180px;height:180px;border-radius:50%;border:1px solid rgba(201,168,76,0.25);"></div>
+              <div class="pulse-ring" id="ring3" style="position:absolute;width:140px;height:140px;border-radius:50%;border:1px solid rgba(201,168,76,0.4);"></div>
+              <!-- Core circle -->
+              <div id="core-circle" style="width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark));display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;box-shadow:0 0 30px rgba(201,168,76,0.2);transition:transform 0.2s;" onclick="togglePlay()">
+                <div id="play-icon" style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent var(--black);margin-left:4px;"></div>
+                <div id="pause-icon" style="display:none;width:18px;height:18px;position:relative;">
+                  <div style="position:absolute;left:0;width:6px;height:18px;background:var(--black);border-radius:1px;"></div>
+                  <div style="position:absolute;right:0;width:6px;height:18px;background:var(--black);border-radius:1px;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Now playing info -->
+            <div style="text-align:center;">
+              <div id="now-playing-label" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Select a Track</div>
+              <div id="now-playing-title" style="font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--cream);min-height:2rem;"></div>
+              <!-- Progress bar -->
+              <div style="margin-top:1.5rem;width:200px;">
+                <div style="width:100%;height:2px;background:rgba(201,168,76,0.15);border-radius:1px;cursor:pointer;position:relative;" onclick="seekAudio(event, this)">
+                  <div id="progress-bar" style="height:100%;width:0%;background:var(--gold);border-radius:1px;transition:width 0.1s;"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin-top:0.5rem;">
+                  <span id="time-current" style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.15em;color:var(--text-mid);">0:00</span>
+                  <span id="time-total" style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.15em;color:var(--text-mid);">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRACK LISTS -->
+          <div>
+            <!-- Classics -->
+            <div id="album-classics">
+              <div style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(201,168,76,0.15);">The Classic Collection</div>
+              <div class="track-item" onclick="playTrack('audio-aint-that-a-kick.mp3', 'Ain\'t That a Kick in the Head', this)">
+                <span class="track-num">01</span><span class="track-title">Ain't That a Kick in the Head</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-fly-me-to-the-moon.mp3', 'Fly Me to the Moon', this)">
+                <span class="track-num">02</span><span class="track-title">Fly Me to the Moon</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-mack-the-knife.mp3', 'Mack the Knife', this)">
+                <span class="track-num">03</span><span class="track-title">Mack the Knife</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-mr-bojangles.mp3', 'Mr. Bojangles', this)">
+                <span class="track-num">04</span><span class="track-title">Mr. Bojangles</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-thats-life.mp3', 'That\'s Life', this)">
+                <span class="track-num">05</span><span class="track-title">That's Life</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-come-fly-with-me.mp3', 'Come Fly With Me', this)">
+                <span class="track-num">06</span><span class="track-title">Come Fly With Me</span><span class="track-play-btn">Play</span>
+              </div>
+            </div>
+            <!-- Christmas -->
+            <div id="album-christmas" style="display:none;">
+              <div style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(201,168,76,0.15);">The Christmas Collection</div>
+              <div class="track-item" onclick="playTrack('audio-its-beginning-to-look.mp3', 'It\'s Beginning to Look a Lot Like Christmas', this)">
+                <span class="track-num">01</span><span class="track-title">It's Beginning to Look a Lot Like Christmas</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-santa-claus.mp3', 'Santa Claus is Coming to Town', this)">
+                <span class="track-num">02</span><span class="track-title">Santa Claus is Coming to Town</span><span class="track-play-btn">Play</span>
+              </div>
+              <div class="track-item" onclick="playTrack('audio-winter-wonderland.mp3', 'Winter Wonderland', this)">
+                <span class="track-num">03</span><span class="track-title">Winter Wonderland</span><span class="track-play-btn">Play</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hidden audio element -->
+        <audio id="audio-player" preload="none"></audio>
+
       </div>
+
+      <style>
+        .track-item {
+          display:flex;align-items:center;gap:1rem;
+          padding:1rem 1.2rem;
+          border-bottom:1px solid rgba(201,168,76,0.08);
+          cursor:pointer;
+          transition:background 0.25s;
+        }
+        .track-item:hover { background:rgba(201,168,76,0.05); }
+        .track-item.active { background:rgba(201,168,76,0.08); }
+        .track-item.active .track-play-btn { color:var(--gold); }
+        .track-num {
+          font-family:'Cinzel',serif;font-size:0.55rem;
+          letter-spacing:0.2em;color:var(--text-mid);
+          flex-shrink:0;width:1.5rem;
+        }
+        .track-title {
+          font-family:'Cormorant Garamond',serif;
+          font-size:1.05rem;font-weight:300;
+          color:var(--text-light);flex:1;
+        }
+        .track-play-btn {
+          font-family:'Cinzel',serif;font-size:0.5rem;
+          letter-spacing:0.25em;color:var(--text-mid);
+          text-transform:uppercase;flex-shrink:0;
+          transition:color 0.2s;
+        }
+        /* Pulse animation — only active when playing */
+        @keyframes pulseRing {
+          0%   { transform:scale(1);   opacity:0.6; }
+          50%  { transform:scale(1.08);opacity:1;   }
+          100% { transform:scale(1);   opacity:0.6; }
+        }
+        .pulsing #ring1 { animation:pulseRing 2.4s ease-in-out infinite; }
+        .pulsing #ring2 { animation:pulseRing 2.4s ease-in-out 0.3s infinite; }
+        .pulsing #ring3 { animation:pulseRing 2.4s ease-in-out 0.6s infinite; }
+        .pulsing #core-circle { box-shadow:0 0 50px rgba(201,168,76,0.4); }
+        @media(max-width:900px){
+          #audio-section > div:last-of-type > div:first-child { display:none!important; }
+          #audio-section [style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr!important; }
+        }
+      </style>
 
       <!-- PHOTO GALLERY -->
       <p class="section-tag reveal" style="margin-bottom:1.5rem;">Photography</p>
