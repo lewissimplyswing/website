@@ -29,13 +29,6 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="Lewis Simply Swing" />
 
-  <!-- ═══════════════════════════════════════════════
-       TWITTER / X CARD
-  ═══════════════════════════════════════════════ -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lewis Simply Swing – Rat Pack Tribute Act Essex" />
-  <meta name="twitter:description" content="Essex's most sought-after Rat Pack tribute act. Available for weddings, parties & corporate events across Essex & the South East." />
-  <meta name="twitter:image" content="https://www.aratpacktribute.co.uk/lewis-photo.jpg" />
 
   <!-- ═══════════════════════════════════════════════
        LOCAL BUSINESS SCHEMA MARKUP
@@ -802,7 +795,24 @@
       .venue-card { flex-direction: column; padding: 2.5rem; }
       footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
       .testimonials-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
     }
+    /* Centering the scroll text and line on mobile */
+@media (max-width: 768px) {
+  .scroll-hint {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: max-content !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .scroll-line {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
     @media (max-width: 600px) {
       .hero-cta { flex-direction: column; align-items: center; }
       .btn-primary, .btn-secondary { width: 100%; text-align: center; }
