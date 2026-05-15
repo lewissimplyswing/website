@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMW8TW7R1L"></script>
+  <script async src="https://googletagmanager.com"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,35 +14,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ═══════════════════════════════════════════════
-       PRIMARY SEO META TAGS
-  ═══════════════════════════════════════════════ -->
   <title>Media – Lewis Simply Swing | Rat Pack Video & Audio Demos</title>
-  <meta name="description" content="Watch video performances and listen to audio demo tracks from Lewis Simply Swing - premier Rat Pack Tribute Act singing Frank Sinatra, Dean Martin, and Bobby Darin classics." />
-  <meta name="keywords" content="rat pack tribute act video, Lewis Simply Swing video, audio demos, swing singer Essex video, live performance rat pack, Sinatra tribute video, Dean Martin tribute Essex, Come Fly With Me, Mack The Knife, Bobby Darin" />
-  <meta name="author" content="Lewis Simply Swing" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.aratpacktribute.co.uk/videos" />
+  <meta name="description" content="Watch video performances and listen to audio demo tracks from Lewis Simply Swing." />
+  <link rel="canonical" href="https://aratpacktribute.co.uk" />
 
-  <!-- ═══════════════════════════════════════════════
-       OPEN GRAPH
-  ═══════════════════════════════════════════════ -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.aratpacktribute.co.uk/videos" />
-  <meta property="og:title" content="Media Demos – Lewis Simply Swing | Rat Pack Tribute Act" />
-  <meta property="og:description" content="Watch video performances and listen to studio audio tracks of Lewis Simply Swing performing classic Rat Pack favorites across Essex." />
-  <meta property="og:image" content="https://www.aratpacktribute.co.uk/lewis-photo.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:site_name" content="Lewis Simply Swing" />
-
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  <meta name="theme-color" content="#0a0906" />
-  <meta name="geo.region" content="GB-ESS" />
-  <meta name="geo.placename" content="Braintree, Essex" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;900&display=swap" rel="stylesheet" />
+  <link href="https://googleapis.com" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -71,11 +47,11 @@
     body::before {
       content: '';
       position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://w3.org id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none; z-index: 1000; opacity: 0.4;
     }
 
-    /* ── NAV ── */
+    /* ── NAV BAR ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
@@ -88,208 +64,79 @@
       border-bottom: 1px solid rgba(201,168,76,0.15);
     }
     .nav-logo {
-      font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-decoration: none;
+      font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none;
     }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      color: var(--text-light);
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: color 0.3s;
+      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.25em; color: var(--text-light); text-decoration: none; text-transform: uppercase; transition: color 0.3s;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 
-    /* ── PAGE HERO ── */
+    /* ── HERO ── */
     .page-hero {
-      min-height: 45vh;
-      display: flex; flex-direction: column;
-      justify-content: flex-end; align-items: flex-start;
-      padding: 10rem 4rem 4rem;
-      position: relative; overflow: hidden;
+      min-height: 45vh; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 10rem 4rem 4rem; position: relative; overflow: hidden;
     }
-    .page-hero-bg {
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 30% 60%, rgba(201,168,76,0.07) 0%, transparent 70%),
-        linear-gradient(160deg, #0a0906 0%, #1a1410 50%, #0a0906 100%);
-    }
-    .page-hero-lines {
-      position: absolute; inset: 0;
-      background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201,168,76,0.03) 80px),
-        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,168,76,0.03) 80px);
-    }
-    .page-hero-image {
-      position: absolute; inset: 0;
-      background-image: url('../lewis-photo.jpg');
-      background-size: cover;
-      background-position: top center;
-      opacity: 0.08;
-      filter: grayscale(100%);
-    }
-    .page-hero-content {
-      position: relative; z-index: 2;
-      max-width: 1200px; width: 100%;
-    }
-    .page-hero-eyebrow {
-      font-family: 'Cinzel', serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.5em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      display: flex; align-items: center; gap: 1rem;
-    }
+    .page-hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, #0a0906 0%, #1a1410 50%, #0a0906 100%); }
+    .page-hero-image { position: absolute; inset: 0; background-image: url('../lewis-photo.jpg'); background-size: cover; background-position: top center; opacity: 0.08; filter: grayscale(100%); }
+    .page-hero-content { position: relative; z-index: 2; max-width: 1200px; width: 100%; }
+    .page-hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.5em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
     .page-hero-eyebrow::before { content: ''; width: 2rem; height: 1px; background: var(--gold); }
-    .page-hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      color: var(--cream);
+    .page-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--cream); }
+
+    /* ── EXACT REPLICATED STYLES FROM ORIGINAL HOME PAGE ── */
+    section { position: relative; }
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 3rem; }
+    
+    .section-tag {
+      font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.5em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
+    }
+    .section-tag::before { content: ''; width: 2rem; height: 1px; background: var(--gold); }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    
+    .section-subtitle {
+      font-size: 1.1rem; color: var(--text-light); font-weight: 300; max-width: 600px; margin-bottom: 4rem; line-height: 1.8;
     }
 
-    /* ── MEDIA SECTIONS CONTAINER ── */
-    .media-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem 8rem;
+    /* Original Video Layout */
+    .video-grid-original {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 5rem;
+    }
+    @media (max-width: 768px) { .video-grid-original { grid-template-columns: 1fr; } }
+    
+    .video-container-box {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;
+    }
+    .video-container-box iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid rgba(201,168,76,0.15);
     }
 
-    .section-heading {
-      font-family: 'Cinzel', serif;
-      font-size: 1.6rem;
-      letter-spacing: 0.15em;
-      color: var(--gold);
-      margin-bottom: 3rem;
-      text-align: center;
-      text-transform: uppercase;
-      position: relative;
-    }
-    .section-heading::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      margin: 1rem auto 0;
-    }
-
-    /* ── VIDEO CONTAINER GRID ── */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 3rem;
-      margin-bottom: 6rem;
-    }
-    @media (max-width: 768px) {
-      .video-grid { grid-template-columns: 1fr; }
-    }
-    .video-card {
-      background: var(--charcoal);
-      border: 1px solid rgba(201,168,76,0.1);
-      padding: 1rem;
-      border-radius: 4px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      height: 0;
-      overflow: hidden;
-      margin-bottom: 1rem;
-    }
-    .video-wrapper iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      border: 0;
-    }
-    .video-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: var(--cream);
-      margin-bottom: 0.25rem;
-    }
-    .video-info p {
-      font-size: 0.9rem;
-      color: var(--text-mid);
-    }
-
-    /* ── AUDIO SELECTION DISPLAY ── */
-    .audio-showcase {
-      background: var(--charcoal);
-      border: 1px solid rgba(201,168,76,0.15);
-      border-radius: 6px;
-      padding: 3rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-    @media (max-width: 768px) {
-      .audio-showcase { padding: 1.5rem; }
-    }
-    .audio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-      gap: 2rem;
-    }
-    @media (max-width: 1100px) {
-      .audio-grid { grid-template-columns: 1fr; }
-    }
-    .audio-track-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(158,146,128,0.1);
-    }
-    .track-meta {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-grow: 1;
-    }
-    .track-number {
-      font-family: 'Cinzel', serif;
-      font-size: 0.85rem;
-      color: var(--gold-dark);
-    }
-    .track-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      color: var(--cream);
+    /* Original Album Tabs & Audio Display Grid Layout */
+    .album-tabs-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;
     }
     
-    /* Elegant Dark/Gold Native Player Styling overrides */
-    audio {
-      height: 36px;
-      width: 260px;
-      outline: none;
+    .original-album-card {
+      background: var(--charcoal); border: 1px solid rgba(201,168,76,0.2); padding: 2rem; border-radius: 2px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: border-color 0.3s;
     }
-    @media (max-width: 480px) {
-      .audio-track-row { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-      audio { width: 100%; }
+    .original-album-card:hover { border-color: var(--gold); }
+    
+    .original-track-tag {
+      font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold); display: block; margin-bottom: 0.75rem; letter-spacing: 0.2em;
     }
+    .original-track-title {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--cream); margin-bottom: 1.5rem; min-height: 2.5rem; display: flex; align-items: center; justify-content: center;
+    }
+    .original-album-card audio { width: 100%; height: 30px; }
 
-    /* ── REFINED FOOTER ── */
-    footer {
-      background: #060503;
-      border-top: 1px solid rgba(201,168,76,0.1);
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    footer p {
-      font-family: 'Cinzel', serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      color: var(--text-mid);
-    }
+    footer { background: #060503; border-top: 1px solid rgba(201,168,76,0.1); padding: 3rem 2rem; text-align: center; }
+    footer p { font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--text-mid); }
+    
+    /* Animation helper classes from index */
+    .reveal { opacity: 1; } 
   </style>
 </head>
 <body>
@@ -303,144 +150,105 @@
     </ul>
   </nav>
 
-  <!-- HERO BANNER -->
+  <!-- PAGE HERO -->
   <header class="page-hero">
     <div class="page-hero-bg"></div>
-    <div class="page-hero-lines"></div>
     <div class="page-hero-image"></div>
     <div class="page-hero-content">
-      <div class="page-hero-eyebrow">Audio & Video</div>
-      <h1 class="page-hero-title">The Showreel Gallery</h1>
+      <div class="page-hero-eyebrow">GALLERY & DEMOS</div>
+      <h1 class="page-hero-title">The Showreel Showcase</h1>
     </div>
   </header>
 
-  <!-- MAIN MEDIA CONTAINER -->
-  <main class="media-container">
-    
-    <!-- VIDEOS LAYOUT BLOCK -->
-    <h2 class="section-heading">Watch Live Performances</h2>
-    <div class="video-grid">
+  <!-- CORE MEDIA SHOWCASE SECTION -->
+  <section id="media" style="background: var(--warm-dark);">
+    <div class="section-inner">
       
-      <!-- Video item 1 -->
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/GwJIV_MifLQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-info">
-          <h3>Lewis Simply Swing - Live Showreel</h3>
-          <p>A compilation of classic dynamic big band arrangements.</p>
-        </div>
-      </div>
+      <!-- Section Header -->
+      <p class="section-tag reveal">See & Hear Lewis</p>
+      <h2 class="section-title reveal">Gallery <em>&amp;</em> Videos</h2>
+      <p class="section-subtitle reveal">Watch Lewis Simply Swing perform classic Rat Pack hits and listen to studio recorded audio tracks.</p>
 
-      <!-- Video item 2 -->
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ZcYJwpt6ENI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- Videos Layout Block (Line 1205 Structure) -->
+      <p class="section-tag reveal" style="margin-bottom: 1.5rem;">Live Performances</p>
+      <div class="video-grid-original reveal">
+        <div class="video-container-box">
+          <iframe src="https://youtube.com" title="Lewis Simply Swing Performance Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="video-info">
-          <h3>Live Lounge Performance Session</h3>
-          <p>Intimate standard sets from Frank Sinatra & Dean Martin.</p>
+        <div class="video-container-box">
+          <iframe src="https://youtube.com" title="Lewis Simply Swing Performance Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
 
-    </div>
-
-    <!-- AUDIO FILES CONTAINER SHOWCASE -->
-    <h2 class="section-heading">Listen to Studio Demo Tracks</h2>
-    <div class="audio-showcase">
-      <div class="audio-grid">
-
-        <!-- Track 1 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">01</span>
-            <span class="track-title">Ain't That a Kick in the Head</span>
-          </div>
+      <!-- Audio Layout Block (Line 1228 Structure) -->
+      <p class="section-tag reveal" style="margin-bottom: 1.5rem;">Audio Demos</p>
+      <p class="reveal" style="font-size: 1.05rem; color: var(--text-light); font-weight: 300; font-style: italic; margin-bottom: 2.5rem;">Click any track below to listen to Lewis.</p>
+      
+      <!-- ALBUM STYLE CARD GRID -->
+      <div class="album-tabs-grid reveal">
+        
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 01</span>
+          <h3 class="original-track-title">Ain't That a Kick in the Head</h3>
           <audio controls src="../01 aint that a kick in the head.mp3"></audio>
         </div>
 
-        <!-- Track 2 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">02</span>
-            <span class="track-title">Fly Me to the Moon</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 02</span>
+          <h3 class="original-track-title">Fly Me to the Moon</h3>
           <audio controls src="../03 fly me to the moon.mp3"></audio>
         </div>
 
-        <!-- Track 3 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">03</span>
-            <span class="track-title">Mack the Knife</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 03</span>
+          <h3 class="original-track-title">Mack the Knife</h3>
           <audio controls src="../05 mack the knife.mp3"></audio>
         </div>
 
-        <!-- Track 4 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">04</span>
-            <span class="track-title">Mr. Bojangles</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 04</span>
+          <h3 class="original-track-title">Mr. Bojangles</h3>
           <audio controls src="../06 mr bojangles.mp3"></audio>
         </div>
 
-        <!-- Track 5 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">05</span>
-            <span class="track-title">That's Life</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 05</span>
+          <h3 class="original-track-title">That's Life</h3>
           <audio controls src="../07 thats life.mp3"></audio>
         </div>
 
-        <!-- Track 6 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">06</span>
-            <span class="track-title">Come Fly With Me</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 06</span>
+          <h3 class="original-track-title">Come Fly With Me</h3>
           <audio controls src="../come-fly-with-me.mp3"></audio>
         </div>
 
-        <!-- Track 7 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">07</span>
-            <span class="track-title">Its Beginning To Look A Lot Like Christmas</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 07</span>
+          <h3 class="original-track-title">It's Beginning To Look A Lot Like Christmas</h3>
           <audio controls src="../Its Beginning To Look A Lot Like Christmas.mp3"></audio>
         </div>
 
-        <!-- Track 8 -->
-        <div class="audio-track-row">
-          <div class="track-meta">
-            <span class="track-number">08</span>
-            <span class="track-title">Santa Claus Is Coming To Town</span>
-          </div>
+        <div class="original-album-card">
+          <span class="original-track-tag">TRACK 08</span>
+          <h3 class="original-track-title">Santa Claus Is Coming To Town</h3>
           <audio controls src="../Santa Claus Is Coming To Town.mp3"></audio>
         </div>
 
       </div>
+
     </div>
+  </section>
 
-  </main>
-
-  <!-- SIMPLE FOOTER -->
   <footer>
     <p>&copy; 2026 Lewis Simply Swing. All Rights Reserved.</p>
   </footer>
 
   <script>
-    // Adds solid background color to navigation bar upon scrolling downward
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+      if (window.scrollY > 50) { nav.classList.add('scrolled'); } 
+      else { nav.classList.remove('scrolled'); }
     });
   </script>
 </body>
