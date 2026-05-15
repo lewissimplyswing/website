@@ -14,8 +14,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Media – Lewis Simply Swing | Rat Pack Video & Audio Demos</title>
-  <meta name="description" content="Watch video performances and listen to audio demo tracks from Lewis Simply Swing." />
+  <!-- ═══════════════════════════════════════════════
+       PRIMARY SEO META TAGS — No Duplicate Penalty
+  ═══════════════════════════════════════════════ -->
+  <title>Media Showcase – Lewis Simply Swing | Rat Pack Video & Audio Demos</title>
+  <meta name="description" content="Watch video performances and listen to audio demo tracks from Lewis Simply Swing - premier Rat Pack Tribute Act singing Frank Sinatra, Dean Martin, and Bobby Darin classics." />
+  <meta name="keywords" content="rat pack tribute act video, Lewis Simply Swing video, audio demos, swing singer Essex video, live performance rat pack, Sinatra tribute video, Dean Martin tribute Essex" />
+  <meta name="author" content="Lewis Simply Swing" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://aratpacktribute.co.uk" />
 
   <link href="https://googleapis.com" rel="stylesheet" />
@@ -83,9 +89,8 @@
     .page-hero-eyebrow::before { content: ''; width: 2rem; height: 1px; background: var(--gold); }
     .page-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--cream); }
 
-    /* ── REPLICATED STYLES FROM ORIGINAL HOME PAGE ── */
     section { position: relative; }
-    .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 3rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 6rem 3rem 8rem; }
     
     .section-tag {
       font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.5em; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
@@ -96,41 +101,27 @@
       font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: var(--cream);
     }
     .section-title em { font-style: italic; color: var(--gold); }
-    
-    .section-subtitle {
-      font-size: 1.1rem; color: var(--text-light); font-weight: 300; max-width: 600px; margin-bottom: 4rem; line-height: 1.8;
-    }
 
-    /* Video Layout Grid */
-    .video-grid-original {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 5rem;
+    /* Track Row Native Interface Styling Map */
+    .track-item {
+      display: flex; align-items: center; padding: 1rem; margin-bottom: 0.5rem; background: rgba(26,23,18,0.3); border: 1px solid rgba(201,168,76,0.05); cursor: pointer; transition: all 0.3s;
     }
-    @media (max-width: 768px) { .video-grid-original { grid-template-columns: 1fr; } }
+    .track-item:hover { background: rgba(26,23,18,0.7); border-color: rgba(201,168,76,0.2); }
+    .track-item.playing-active { background: rgba(201,168,76,0.08); border-color: var(--gold); }
     
-    .video-container-box {
-      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border: 1px solid rgba(201,168,76,0.15);
-    }
-    .video-container-box iframe {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-    }
+    .track-num { font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold-dark); width: 2.5rem; }
+    .track-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--cream); flex-grow: 1; }
+    .track-play-btn { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.15em; color: var(--text-mid); text-transform: uppercase; }
+    .track-item.playing-active .track-play-btn { color: var(--gold-light); font-weight: 600; }
 
-    /* Album Tabs Layout */
-    .album-tabs-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;
+    /* Interactive Vinyl Rotation Engine Animation Loops */
+    @keyframes spinDisc { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .vinyl-spinning-loop { animation: spinDisc 3.5s linear infinite; }
+
+    /* Responsive Viewport Alignment Constraints */
+    @media (max-width: 900px) {
+      #player-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
     }
-    
-    .original-album-card {
-      background: var(--charcoal); border: 1px solid rgba(201,168,76,0.2); padding: 2rem; border-radius: 2px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: border-color 0.3s;
-    }
-    .original-album-card:hover { border-color: var(--gold); }
-    
-    .original-track-tag {
-      font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold); display: block; margin-bottom: 0.75rem; letter-spacing: 0.2em;
-    }
-    .original-track-title {
-      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--cream); margin-bottom: 1.5rem; min-height: 2.5rem; display: flex; align-items: center; justify-content: center;
-    }
-    .original-album-card audio { width: 100%; height: 30px; }
 
     footer { background: #060503; border-top: 1px solid rgba(201,168,76,0.1); padding: 3rem 2rem; text-align: center; }
     footer p { font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--text-mid); }
@@ -152,86 +143,125 @@
     <div class="page-hero-bg"></div>
     <div class="page-hero-image"></div>
     <div class="page-hero-content">
-      <div class="page-hero-eyebrow">GALLERY & DEMOS</div>
-      <h1 class="page-hero-title">The Showreel Showcase</h1>
+      <div class="page-hero-eyebrow">SHOWCASE PROFILE</div>
+      <h1 class="page-hero-title">Gallery & Demos</h1>
     </div>
   </header>
 
-  <!-- CORE MEDIA SHOWCASE SECTION -->
-  <section id="media" style="background: var(--warm-dark);">
+  <!-- ORIGINAL SECTION LAYOUT CONTAINER -->
+  <section id="media" style="background:var(--warm-dark);">
     <div class="section-inner">
-      
+
       <!-- Section Header -->
       <p class="section-tag">See & Hear Lewis</p>
-      <h2 class="section-title">Gallery <em>&amp;</em> Videos</h2>
-      <p class="section-subtitle">Watch Lewis Simply Swing perform classic Rat Pack hits and listen to studio recorded audio tracks.</p>
+      <h2 class="section-title">Gallery <em>&amp; Videos</em></h2>
+      <p style="font-size:1.1rem;color:var(--text-light);font-weight:300;max-width:600px;margin-bottom:4rem;line-height:1.8;">Watch Lewis perform live and browse behind the scenes photography from shoots and events.</p>
 
-      <!-- Videos Layout Block -->
-      <p class="section-tag" style="margin-bottom: 1.5rem;">Live Performances</p>
-      <div class="video-grid-original">
-        <div class="video-container-box">
-          <iframe src="https://youtube.com" title="Lewis Simply Swing Performance Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- VIDEOS GRID -->
+      <p class="section-tag" style="margin-bottom:1.5rem;">Live Performances</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:5rem;" id="video-grid-box">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;">
+          <iframe src="https://www.youtube.com/embed/GwJIV_MifLQ" title="Lewis Simply Swing Performance Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid rgba(201,168,76,0.15);"></iframe>
         </div>
-        <div class="video-container-box">
-          <iframe src="https://youtube.com" title="Lewis Simply Swing Performance Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;">
+          <iframe src="https://www.youtube.com/embed/ZcYJwpt6ENI" title="Lewis Simply Swing Performance Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid rgba(201,168,76,0.15);"></iframe>
         </div>
       </div>
 
-      <!-- Audio Layout Block -->
-      <p class="section-tag" style="margin-bottom: 1.5rem;">Audio Demos</p>
-      <p style="font-size: 1.05rem; color: var(--text-light); font-weight: 300; font-style: italic; margin-bottom: 2.5rem;">Click any track below to listen to Lewis.</p>
-      
-      <!-- ALBUM STYLE CARD GRID -->
-      <div class="album-tabs-grid">
-        
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 01</span>
-          <h3 class="original-track-title">Ain't That a Kick in the Head</h3>
-          <audio controls src="../01 aint that a kick in the head.mp3"></audio>
+      <!-- AUDIO DEMOS HUB -->
+      <div id="audio-section" style="margin-bottom:5rem;">
+        <p class="section-tag" style="margin-bottom:0.5rem;">Audio Demos</p>
+        <p style="font-size:1.05rem;color:var(--text-light);font-weight:300;font-style:italic;margin-bottom:2.5rem;">Click any track below to listen to Lewis. Select a collection to get started.</p>
+
+        <!-- ALBUM SELECTION NAVIGATION TABS -->
+        <div style="display:flex;gap:0;margin-bottom:2.5rem;border:1px solid rgba(201,168,76,0.2);">
+          <button id="tab-classics" onclick="switchAlbum('classics')" style="flex:1;padding:1.1rem 2rem;background:var(--gold);color:var(--black);border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;transition:all 0.3s;">The Classic Collection</button>
+          <button id="tab-christmas" onclick="switchAlbum('christmas')" style="flex:1;padding:1.1rem 2rem;background:transparent;color:var(--text-mid);border:none;border-left:1px solid rgba(201,168,76,0.2);cursor:pointer;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;transition:all 0.3s;">The Christmas Collection</button>
         </div>
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 02</span>
-          <h3 class="original-track-title">Fly Me to the Moon</h3>
-          <audio controls src="../03 fly me to the moon.mp3"></audio>
-        </div>
+        <!-- STYLED CUSTOM VINYL RECORD CONTROLLER PANEL -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" id="player-grid">
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 03</span>
-          <h3 class="original-track-title">Mack the Knife</h3>
-          <audio controls src="../05 mack the knife.mp3"></audio>
-        </div>
+          <!-- PULSING CIRCLE VINYL TRACK DISPLAY -->
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2rem;">
+            <div id="player-visual" style="position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center;margin-bottom:2rem;border-radius:50%;background:#111;">
+              <!-- Concentric grooves simulating a vinyl record -->
+              <div class="pulse-ring" id="ring1" style="position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid rgba(201,168,76,0.15);"></div>
+              <div class="pulse-ring" id="ring2" style="position:absolute;width:180px;height:180px;border-radius:50%;border:1px solid rgba(201,168,76,0.25);"></div>
+              <div class="pulse-ring" id="ring3" style="position:absolute;width:140px;height:140px;border-radius:50%;border:1px solid rgba(201,168,76,0.4);"></div>
+              <!-- Interactive Core playback toggle button -->
+              <div id="core-circle" style="width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark));display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;box-shadow:0 0 30px rgba(201,168,76,0.2);transition:transform 0.2s;-webkit-tap-highlight-color:transparent;" onclick="togglePlay()">
+                <div id="play-icon" style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent var(--black);margin-left:4px;"></div>
+                <div id="pause-icon" style="display:none;width:18px;height:18px;position:relative;">
+                  <div style="position:absolute;left:0;width:6px;height:18px;background:var(--black);border-radius:1px;"></div>
+                  <div style="position:absolute;right:0;width:6px;height:18px;background:var(--black);border-radius:1px;"></div>
+                </div>
+              </div>
+            </div>
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 04</span>
-          <h3 class="original-track-title">Mr. Bojangles</h3>
-          <audio controls src="../06 mr bojangles.mp3"></audio>
-        </div>
+            <!-- Streaming metadata tracking engine indicators -->
+            <div style="text-align:center;">
+              <div id="now-playing-label" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Select a Track</div>
+              <div id="now-playing-title" style="font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--cream);min-height:2rem;"></div>
+              <!-- Timeline scrubber channel overlay -->
+              <div style="margin-top:1.5rem;width:200px;">
+                <div style="width:100%;height:2px;background:rgba(201,168,76,0.15);border-radius:1px;cursor:pointer;position:relative;" onclick="seekAudio(event, this)">
+                  <div id="progress-bar" style="height:100%;width:0%;background:var(--gold);border-radius:1px;transition:width 0.1s;"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin-top:0.5rem;">
+                  <span id="time-current" style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.15em;color:var(--text-mid);">0:00</span>
+                  <span id="time-total" style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.15em;color:var(--text-mid);">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 05</span>
-          <h3 class="original-track-title">That's Life</h3>
-          <audio controls src="../07 thats life.mp3"></audio>
-        </div>
+          <!-- REPLICATED TRACKLIST SEGMENTS MAP -->
+          <div>
+            <!-- Classics Segment Grid Section -->
+            <div id="album-classics">
+              <div style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(201,168,76,0.15);">The Classic Collection</div>
+              
+              <div class="track-item" onclick="playTrack('../come-fly-with-me.mp3', 'Come Fly With Me', this)">
+                <span class="track-num">01</span><span class="track-title">Come Fly With Me</span><span class="track-play-btn">Play</span>
+              </div>
+              
+              <div class="track-item" onclick="playTrack('../05 mack the knife.mp3', 'Mack the Knife', this)">
+                <span class="track-num">02</span><span class="track-title">Mack the Knife</span><span class="track-play-btn">Play</span>
+              </div>
+              
+              <div class="track-item" onclick="playTrack('../01 aint that a kick in the head.mp3', 'Ain\'t That a Kick in the Head', this)">
+                <span class="track-num">03</span><span class="track-title">Ain't That a Kick in the Head</span><span class="track-play-btn">Play</span>
+              </div>
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 06</span>
-          <h3 class="original-track-title">Come Fly With Me</h3>
-          <audio controls src="../come-fly-with-me.mp3"></audio>
-        </div>
+              <div class="track-item" onclick="playTrack('../03 fly me to the moon.mp3', 'Fly Me to the Moon', this)">
+                <span class="track-num">04</span><span class="track-title">Fly Me to the Moon</span><span class="track-play-btn">Play</span>
+              </div>
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 07</span>
-          <h3 class="original-track-title">It's Beginning To Look A Lot Like Christmas</h3>
-          <audio controls src="../Its Beginning To Look A Lot Like Christmas.mp3"></audio>
-        </div>
+              <div class="track-item" onclick="playTrack('../06 mr bojangles.mp3', 'Mr. Bojangles', this)">
+                <span class="track-num">05</span><span class="track-title">Mr. Bojangles</span><span class="track-play-btn">Play</span>
+              </div>
 
-        <div class="original-album-card">
-          <span class="original-track-tag">TRACK 08</span>
-          <h3 class="original-track-title">Santa Claus Is Coming To Town</h3>
-          <audio controls src="../Santa Claus Is Coming To Town.mp3"></audio>
-        </div>
+              <div class="track-item" onclick="playTrack('../07 thats life.mp3', 'That\'s Life', this)">
+                <span class="track-num">06</span><span class="track-title">That's Life</span><span class="track-play-btn">Play</span>
+              </div>
+            </div>
 
+            <!-- Christmas Segment Grid Section -->
+            <div id="album-christmas" style="display:none;">
+              <div style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(201,168,76,0.15);">The Christmas Collection</div>
+              
+              <div class="track-item" onclick="playTrack('../Its Beginning To Look A Lot Like Christmas.mp3', 'It\'s Beginning to Look a Lot Like Christmas', this)">
+                <span class="track-num">01</span><span class="track-title">It's Beginning to Look a Lot Like Christmas</span><span class="track-play-btn">Play</span>
+              </div>
+              
+              <div class="track-item" onclick="playTrack('../Santa Claus Is Coming To Town.mp3', 'Santa Claus Is Coming to Town', this)">
+                <span class="track-num">02</span><span class="track-title">Santa Claus Is Coming to Town</span><span class="track-play-btn">Play</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -241,7 +271,113 @@
     <p>&copy; 2026 Lewis Simply Swing. All Rights Reserved.</p>
   </footer>
 
+  <!-- CORE SCRIPT AUDIO LOGIC LAYER ENGINE -->
   <script>
+    let currentAudio = new Audio();
+    let currentTrackItem = null;
+
+    function playTrack(src, title, element) {
+      // Toggle highlights and resets matching your home layout states
+      document.querySelectorAll('.track-item').forEach(item => item.classList.remove('playing-active'));
+      
+      if (currentAudio.src.includes(src) && !currentAudio.paused) {
+        currentAudio.pause();
+        setPlaybackUi(false);
+        return;
+      }
+
+      if (!currentAudio.src.includes(src)) {
+        currentAudio.src = src;
+        document.getElementById('now-playing-label').innerText = "Now Playing";
+        document.getElementById('now-playing-title').innerText = title;
+      }
+
+      currentAudio.play();
+      currentTrackItem = element;
+      currentTrackItem.classList.add('playing-active');
+      setPlaybackUi(true);
+    }
+
+    function togglePlay() {
+      if (!currentAudio.src) return;
+      if (currentAudio.paused) {
+        currentAudio.play();
+        setPlaybackUi(true);
+        if(currentTrackItem) currentTrackItem.classList.add('playing-active');
+      } else {
+        currentAudio.pause();
+        setPlaybackUi(false);
+      }
+    }
+
+    function setPlaybackUi(isPlaying) {
+      const playIcon = document.getElementById('play-icon');
+      const pauseIcon = document.getElementById('pause-icon');
+      const disc = document.getElementById('player-visual');
+
+      if (isPlaying) {
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+        disc.classList.add('vinyl-spinning-loop');
+      } else {
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        disc.classList.remove('vinyl-spinning-loop');
+      }
+    }
+
+    // Interactive scrubber calculation engine parameters
+    currentAudio.addEventListener('timeupdate', () => {
+      const progressBar = document.getElementById('progress-bar');
+      const timeCurrent = document.getElementById('time-current');
+      const timeTotal = document.getElementById('time-total');
+
+      if (!isNaN(currentAudio.duration)) {
+        const pct = (currentAudio.currentTime / currentAudio.duration) * 100;
+        progressBar.style.width = pct + '%';
+        timeCurrent.innerText = formatTime(currentAudio.currentTime);
+        timeTotal.innerText = formatTime(currentAudio.duration);
+      }
+    });
+
+    function seekAudio(event, element) {
+      if (!currentAudio.src || isNaN(currentAudio.duration)) return;
+      const rect = element.getBoundingClientRect();
+      const clickX = event.clientX - rect.left;
+      const width = rect.width;
+      currentAudio.currentTime = (clickX / width) * currentAudio.duration;
+    }
+
+    function formatTime(secs) {
+      const m = Math.floor(secs / 60);
+      const s = Math.floor(secs % 60);
+      return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    // Dynamic collection switcher tab triggers mirroring homepage styles
+    function switchAlbum(albumKey) {
+      const tabClassics = document.getElementById('tab-classics');
+      const tabChristmas = document.getElementById('tab-christmas');
+      const blockClassics = document.getElementById('album-classics');
+      const blockChristmas = document.getElementById('album-christmas');
+
+      if (albumKey === 'classics') {
+        tabClassics.style.background = 'var(--gold)';
+        tabClassics.style.color = 'var(--black)';
+        tabChristmas.style.background = 'transparent';
+        tabChristmas.style.color = 'var(--text-mid)';
+        blockClassics.style.display = 'block';
+        blockChristmas.style.display = 'none';
+      } else {
+        tabChristmas.style.background = 'var(--gold)';
+        tabChristmas.style.color = 'var(--black)';
+        tabClassics.style.background = 'transparent';
+        tabClassics.style.color = 'var(--text-mid)';
+        blockClassics.style.display = 'none';
+        blockChristmas.style.display = 'block';
+      }
+    }
+
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
       if (window.scrollY > 50) { nav.classList.add('scrolled'); } 
